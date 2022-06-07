@@ -8,7 +8,7 @@ const audio = new Audio();
 birds.forEach((bird) =>
     bird.addEventListener("click", (e) => {
         let birdSong = e.currentTarget.dataset;
-        audio.src = `../SoundsBirds/assets/audio/${birdSong.bird}.mp3`;
+        audio.src = `assets/audio/${birdSong.bird}.mp3`;
         section.style.background = `url(../SoundsBirds/assets/img/${birdSong.bird}.jpg)`;
         audio.currentTime = 0;
         audio.play();
@@ -17,7 +17,7 @@ birds.forEach((bird) =>
 );
 
 const playSong = () => {
-    audio.src = "../SoundsBirds/assets/audio/forest.mp3";
+    audio.src = "assets/audio/forest.mp3";
     audio.currentTime = 0;
     audio.play();
 };
