@@ -9,7 +9,7 @@ birds.forEach((bird) =>
     bird.addEventListener("click", (e) => {
         let birdSong = e.currentTarget.dataset;
         audio.src = `assets/audio/${birdSong.bird}.mp3`;
-        section.style.background = `url(../SoundsBirds/assets/img/${birdSong.bird}.jpg)`;
+        section.style.background = `url(assets/img/${birdSong.bird}.jpg)`;
         audio.currentTime = 0;
         audio.play();
         getPause();
