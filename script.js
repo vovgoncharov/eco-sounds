@@ -8,31 +8,31 @@ const audio = new Audio();
 birds.forEach((bird) =>
     bird.addEventListener("click", (e) => {
         let birdSong = e.currentTarget.dataset;
-        audio.src = `./assets/audio/${birdSong.bird}.mp3`;
-        section.style.background = `url(../assets/img/${birdSong.bird}.jpg)`;
+        audio.src = `../SoundsBirds/assets/audio/${birdSong.bird}.mp3`;
+        section.style.background = `url(../SoundsBirds/assets/img/${birdSong.bird}.jpg)`;
         audio.currentTime = 0;
         audio.play();
         getPause();
     }),
 );
 
-export const playSong = () => {
-    audio.src = "./assets/audio/forest.mp3";
+const playSong = () => {
+    audio.src = "../SoundsBirds/assets/audio/forest.mp3";
     audio.currentTime = 0;
     audio.play();
 };
-export const pauseSong = () => {
+const pauseSong = () => {
     audio.pause();
 };
 
-export const getPause = () => {
+const getPause = () => {
     document.querySelector(".wrap-button").classList.remove("squer");
     document.querySelectorAll(".span-btn").forEach((element) => {
         element.classList.add("pause");
     });
 };
 
-export const getPlay = () => {
+const getPlay = () => {
     document.querySelector(".wrap-button").classList.add("squer");
     document.querySelectorAll(".span-btn").forEach((element) => {
         element.classList.remove("pause");
@@ -44,3 +44,5 @@ pause.addEventListener("click", pauseSong);
 
 play.addEventListener("click", getPause);
 pause.addEventListener("click", getPlay);
+
+console.log(20);
